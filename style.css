@@ -1,0 +1,51 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	background-color: #f0f0f0;
+}
+
+.container {
+	padding: 20px;
+	border: 4px solid transparent; /* Начальная прозрачная рамка */
+	border-radius: 8px;
+	animation: rainbow-border 5s linear infinite; /* Анимация для рамки */
+}
+
+h1 {
+	font-family: Arial, sans-serif;
+	font-size: 48px;
+	text-align: center;
+	margin: 0;
+}
+
+/* Медиа-запрос для экранов шириной менее 520 пикселей */
+@media (max-width: 520px) {
+	h1 {
+		font-size: 24px; /* Уменьшаем размер шрифта до 32 пикселей */
+	}
+}
+
+/* Анимация для изменения цвета рамки */
+@keyframes rainbow-border {
+	0% {
+		border-color: #8721db;
+	} /* Красный */
+	20% {
+		border-color: #ff7f00;
+	} /* Оранжевый */
+	40% {
+		border-color: #ffff00;
+	} /* Желтый */
+	60% {
+		border-color: #00ff00;
+	} /* Зеленый */
+	80% {
+		border-color: #007fff;
+	} /* Голубой */
+	100% {
+		border-color: #8b00ff;
+	} /* Фиолетовый */
+}
